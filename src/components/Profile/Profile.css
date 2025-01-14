@@ -1,0 +1,49 @@
+.profile-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: #212121;
+}
+
+.profile-container p {
+    color: #fff;
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 0.4em;
+}
+
+.social-media a {
+    margin-left: 10px;
+}
+
+.logo {
+    transition: 1s;
+}
+
+.logo:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+#profile-image {
+    margin-top: 10px;
+    width: 205px;
+    height: 220px;
+    border-radius: 100%;
+}
+
+#title {
+    color: #fff;
+}
+
+span {
+    font-weight: 900;
+    color: #344CB7;
+}

@@ -1,0 +1,28 @@
+.nav {
+    margin: 0px;
+    background-color: #344CB7;
+    justify-content: space-evenly;
+    padding: 15px;
+    display: flex;
+}
+
+
+li {
+    color: #fff;
+    list-style-type: none;
+}
+
+.nav a {
+    background-color: #525CEB;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.nav a:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 1s;
+}

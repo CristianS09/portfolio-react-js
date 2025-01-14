@@ -1,0 +1,17 @@
+.skills-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.skills-image {
+    margin-left: 4px;
+    width: 80px;
+    height: auto;
+}
+
+hr {
+    width: 200px;
+}
