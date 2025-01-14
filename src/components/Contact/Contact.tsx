@@ -34,7 +34,7 @@ function Contact() {
                 <div className="form-container">
                     <h2>Me envie um email</h2>
                     <div className="email-info">
-                        <img src="../src/assets/images/logo/email.svg" alt="Imagem email" />
+                        <img src="/images/logo/email.svg" alt="Imagem email" />
                         <p>cristiansmacena09@gmail.com</p>
                     </div>
                     <input placeholder="Assunto do Email" onChange={(input) => emailSubject(input)} />

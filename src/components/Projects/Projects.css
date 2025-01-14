@@ -40,13 +40,14 @@
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: 1s;
     width: 150px;
     background-color: #fff;
 
 }
 
 .link-button:hover {
-    background-color: #577BC1;
+    opacity: 0.5;
 }
 
 a {
@@ -65,8 +66,8 @@ a {
 .project-images {
     width: 220px;
     border-radius: 5px;
-    border: 2px solid #fff;
     margin-left: 2em;
+    box-shadow: 2px 2px 2px 3px;
     margin-bottom: 2em;
 }
 

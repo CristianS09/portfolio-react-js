@@ -18,8 +18,8 @@ function Projects() {
                         </div>
                         <a href={e.link}>
                             <div className="link-button">
-                                Link Github
-                                <img src={'../src/assets/images/logo/github-repo.svg'} />
+                                Mais Detalhes
+                                <img src={'images/logo/github-repo.svg'} />
                             </div>
                         </a>
                     </div>

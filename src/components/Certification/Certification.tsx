@@ -4,7 +4,7 @@ function Certification() {
             <div className="container">
                 <h1>Certificados</h1>
                 <hr />
-                <img src={'../src/assets/images/certificado-java.jpeg'} />
+                <img src={'images/certificado-java.jpeg'} />
                 <hr />
             </div>
         </body>
