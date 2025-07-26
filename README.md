@@ -1,6 +1,6 @@
-# Portfólio desenvolvido em React JS
+# Portfólio React 
 
-[![portf-lio.png](https://i.postimg.cc/8Cwg3VWR/portf-lio.png)](https://postimg.cc/KKKWkw0j)
+[![portfolio.png](https://i.postimg.cc/7LC1M1GJ/portfolio.png)](https://postimg.cc/rdktqr9q)
 
 ## Tecnologias Utilizadas
 - **Typescript**;
