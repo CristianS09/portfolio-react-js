@@ -1,0 +1,14 @@
+.certification-images {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 6px;
+    border: 5px solid #000;
+}
+
+@media only screen and (max-width: 600px) and (max-width: 700px) {
+    .certification-images {
+        width: 300px;
+        height: 200px;
+    }
+
+}
