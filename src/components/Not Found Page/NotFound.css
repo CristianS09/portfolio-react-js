@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: #072ac8;
+}
+
+#link {
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px;
+    background-color: #072ac8;
+}
+
+#link:hover {
+    opacity: 0.8;
+}
