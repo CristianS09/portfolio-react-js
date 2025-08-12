@@ -27,7 +27,7 @@
     box-shadow: 10px 10px;
     animation-name: opacity;
     animation-duration: 0.8s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease;
 }
 
 .project-card h1 {

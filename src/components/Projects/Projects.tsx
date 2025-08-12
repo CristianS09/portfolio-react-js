@@ -43,6 +43,7 @@ function Projects() {
         <div className="select-container">
             <select onChange={(value) => selectList(value.target.value)} defaultValue={'All'}>
                 <option value={'All'}>Todos</option>
+                <option value={'Javascript/Html/CSS'}>Javascript /Html/ CSS</option>
                 <option value={'React'}>React</option>
                 <option value={'Java'}>Java</option>
                 <option value={'React Native'}>React Native</option>
@@ -50,24 +51,22 @@ function Projects() {
             </select>
         </div>
         {selectElement.map((e) =>
-            <body>
-                <div className="container">
-                    <div key={e.id} className="project-card">
-                        <h1>{e.title}</h1>
-                        <p>{e.subtitle}</p>
-                        <div className="images-container">
-                            <img className="project-images" src={e.images[0]} alt={e.alt} />
-                            <img className="project-images" src={e.images[1]} alt={e.alt} />
-                        </div>
-                        <a href={e.link}>
-                            <div className="link-button">
-                                Mais Detalhes
-                                <img src={'images/logo/github-repo.svg'} />
-                            </div>
-                        </a>
+            <div className="container" key={e.id}>
+                <div className="project-card">
+                    <h1>{e.title}</h1>
+                    <p>{e.subtitle}</p>
+                    <div className="images-container">
+                        <img className="project-images" src={e.images[0]} alt={e.alt} />
+                        <img className="project-images" src={e.images[1]} alt={e.alt} />
                     </div>
+                    <a href={e.link}>
+                        <div className="link-button">
+                            Mais Detalhes
+                            <img src={'images/logo/github-repo.svg'} />
+                        </div>
+                    </a>
                 </div>
-            </body>
+            </div>
         )}
     </>
     );
