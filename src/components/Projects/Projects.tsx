@@ -14,6 +14,26 @@ interface Projects {
     language: string,
 }
 
+//Fecha modal
+function closeModal() {
+    document.getElementById('modal').hidden = true;
+    document.getElementById('modal-overlayer').hidden = true;
+    document.body.style.overflow = 'visible';
+}
+
+//Abre modal com a imagem selecionada
+function openModal(url: string) {
+    document.getElementById('modal').hidden = false;
+    document.getElementById('modal-overlayer').hidden = false;
+    document.getElementById('modal-image').src = url;
+    document.body.style.overflow = 'hidden';
+}
+
+//Leva para o topo da página e mostra/oculta botão
+function start() {
+    window.scrollTo(0, 0);
+}
+
 //Componente Projects
 function Projects() {
 
@@ -37,7 +57,22 @@ function Projects() {
     }, []);
 
     return (<>
+        <div id="modal-overlayer" hidden>
+        </div>
+        <div id="start-button" onClick={start} >
+            <img src="/images/logo/arrow-up-solid.svg" width={13} />
+        </div>
         <Nav />
+        <div id="modal-container">
+            <div id="modal" hidden>
+                <div id="modal-header">
+                    <div id="close-modal-button" onClick={closeModal}>X</div>
+                </div>
+                <div id="modal-body">
+                    <img id="modal-image" />
+                </div>
+            </div>
+        </div>
         <h1 style={{ textAlign: 'center' }}>Projetos</h1>
         <hr />
         <div className="select-container">
@@ -50,24 +85,31 @@ function Projects() {
                 <option value={'Flutter'}>Flutter</option>
             </select>
         </div>
-        {selectElement.map((e) =>
-            <div className="container" key={e.id}>
-                <div className="project-card">
-                    <h1>{e.title}</h1>
-                    <p>{e.subtitle}</p>
-                    <div className="images-container">
-                        <img className="project-images" src={e.images[0]} alt={e.alt} />
-                        <img className="project-images" src={e.images[1]} alt={e.alt} />
+        <div className="container">
+            {selectElement.map((e) =>
+                <div className="project-card" key={e.id}>
+                    <div className="project-card-header">
+                        <h1>{e.title}</h1>
+                        <hr />
                     </div>
-                    <a href={e.link}>
-                        <div className="link-button">
-                            Mais Detalhes
-                            <img src={'images/logo/github-repo.svg'} />
+                    <div className="project-card-body">
+                        <p>{e.subtitle}</p>
+                        <div className="images-container">
+                            <img className="project-images" src={e.images[0]} alt={e.alt} onClick={() => openModal(e.images[0])} />
+                            <img className="project-images" src={e.images[1]} alt={e.alt} onClick={() => openModal(e.images[1])} />
                         </div>
-                    </a>
+                    </div>
+                    <div className="project-card-footer">
+                        <a href={e.link}>
+                            <div className="link-button">
+                                Mais Detalhes
+                                <img src={'images/logo/github-repo.svg'} />
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        )}
+            )}
+        </div>
     </>
     );
 }

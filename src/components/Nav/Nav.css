@@ -4,6 +4,9 @@
     justify-content: space-evenly;
     padding: 15px;
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 7;
 }
 
 

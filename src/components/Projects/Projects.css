@@ -1,13 +1,3 @@
-@keyframes opacity {
-    from {
-        opacity: 0.0;
-    }
-
-    to {
-        opacity: 1.0;
-    }
-}
-
 .project-container {
     display: flex;
     align-items: center;
@@ -17,7 +7,8 @@
 .project-card {
     width: 60%;
     padding: 5px;
-    margin-bottom: 2em;
+    text-align: center;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,9 +16,14 @@
     border-radius: 5px;
     background-color: #212121;
     box-shadow: 10px 10px;
-    animation-name: opacity;
-    animation-duration: 0.8s;
-    animation-timing-function: ease;
+}
+
+.project-card-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .project-card h1 {
@@ -72,16 +68,23 @@ a {
 .images-container {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }
 
 .project-images {
-    width: 36%;
     border-radius: 5px;
-    margin-left: 2em;
+    width: 50%;
+    height: auto;
     box-shadow: 2px 2px 2px 3px;
     margin-bottom: 2em;
+}
+
+.project-images:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .select-container {
@@ -102,30 +105,86 @@ select {
     font-size: 18px;
 }
 
-@media only screen and (max-width: 600px) and (max-width: 700px) {
-    body {
+#modal-overlayer {
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 8;
+}
 
-        .images-container {
-            flex-wrap: nowrap;
-        }
+#modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .project-card {
-            width: 75%;
-            padding: 25px;
-        }
+#modal {
+    position: fixed;
+    top: 5%;
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+    padding: 5px;
+    z-index: 9;
+}
 
-        .project-card h1 {
-            font-size: 26px;
-        }
+#modal::-webkit-scrollbar {
+    background-color: #fff;
+    border-radius: 10px;
+}
 
-        .project-card p {
-            font-size: 20px;
-        }
+#modal::-webkit-scrollbar-thumb {
+    background-color: #495057;
+    border-radius: 10px;
+}
 
-        .project-images {
-            width: 140px;
-            margin-left: 1em;
-            margin-bottom: 1em;
-        }
-    }
+#modal-header {
+    margin-bottom: 5px;
+}
+
+#modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+#modal-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#close-modal-button {
+    background-color: #d00000;
+    color: #fff;
+    padding: 5px;
+    width: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-modal-button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#start-button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: #344cb7;
+    border-radius: 100%;
+    padding: 18px;
+    left: 90%;
+    top: 80%;
+}
+
+#start-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
