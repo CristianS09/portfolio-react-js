@@ -14,30 +14,40 @@ interface Projects {
     language: string,
 }
 
-//Fecha modal
-function closeModal() {
-    document.getElementById('modal').hidden = true;
-    document.getElementById('modal-overlayer').hidden = true;
-    document.body.style.overflow = 'visible';
-}
-
-//Abre modal com a imagem selecionada
-function openModal(url: string) {
-    document.getElementById('modal').hidden = false;
-    document.getElementById('modal-overlayer').hidden = false;
-    document.getElementById('modal-image').src = url;
-    document.body.style.overflow = 'hidden';
-}
-
 //Leva para o topo da página e mostra/oculta botão
 function start() {
-    window.scrollTo(0, 0);
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
 }
 
 //Componente Projects
 function Projects() {
+    //UseState
+    //State para Mostrar/Ocultar modal
+    const [visible, setVisible] = useState<boolean>(false);
 
+    //State para Mostrar/Ocultar botão de levar para o topo
+    const [buttonVisible, setButtonVisible] = useState<boolean>(false);
+
+    //Altera filtro do elemento select
     const [selectElement, setSelectElement] = useState<Projects[]>([]);
+    //Fecha modal
+    function closeModal() {
+        setVisible(false);
+        document.body.style.overflow = 'visible';
+    }
+
+    //Abre modal com a imagem selecionada
+    function openModal(url: string) {
+        setVisible(true);
+        const modalImage: HTMLImageElement | any = document.getElementById('modal-image');
+        modalImage.src = url;
+        document.body.style.overflow = 'hidden';
+    }
+
     //Obtem o valor da tag select
     function selectList(select: HTMLSelectElement | string) {
         /*Obtem a lista de prjects de acordo com a linguagem 
@@ -53,18 +63,25 @@ function Projects() {
     }
     //Passa o valor de 'Todos' para a função ao carregar a aplicação
     useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                setButtonVisible(true);
+            } else {
+                setButtonVisible(false);
+            }
+        })
         selectList('All');
     }, []);
 
     return (<>
-        <div id="modal-overlayer" hidden>
+        <div id="modal-overlayer" style={{ visibility: visible ? 'visible' : 'hidden' }}>
         </div>
-        <div id="start-button" onClick={start} >
+        <div id="start-button" onClick={start} title="Ir para o topo" style={{ visibility: buttonVisible ? 'visible' : 'hidden' }} >
             <img src="/images/logo/arrow-up-solid.svg" width={13} />
         </div>
         <Nav />
         <div id="modal-container">
-            <div id="modal" hidden>
+            <div id="modal" style={{ visibility: visible ? 'visible' : 'hidden' }}>
                 <div id="modal-header">
                     <div id="close-modal-button" onClick={closeModal}>X</div>
                 </div>

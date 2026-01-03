@@ -178,8 +178,8 @@ select {
     align-items: center;
     justify-items: center;
     background-color: #344cb7;
-    border-radius: 100%;
-    padding: 18px;
+    border-radius: 50px;
+    padding: 10px;
     left: 90%;
     top: 80%;
 }
