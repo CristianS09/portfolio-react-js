@@ -74,7 +74,7 @@ function Projects() {
     }, []);
 
     return (<>
-        <div id="modal-overlayer" style={{ visibility: visible ? 'visible' : 'hidden' }}>
+        <div id="modal-overlayer" style={{ visibility: visible ? 'visible' : 'hidden' }} onClick={closeModal}>
         </div>
         <div id="start-button" onClick={start} title="Ir para o topo" style={{ visibility: buttonVisible ? 'visible' : 'hidden' }} >
             <img src="/images/logo/arrow-up-solid.svg" width={13} />
@@ -97,7 +97,7 @@ function Projects() {
                 <option value={'All'}>Todos</option>
                 <option value={'Javascript/Html/CSS'}>Javascript /Html/ CSS</option>
                 <option value={'React'}>React</option>
-                <option value={'Java'}>Java</option>
+                <option value={'Java'}>Java/Spring Boot</option>
                 <option value={'React Native'}>React Native</option>
                 <option value={'Flutter'}>Flutter</option>
             </select>
@@ -117,7 +117,7 @@ function Projects() {
                         </div>
                     </div>
                     <div className="project-card-footer">
-                        <a href={e.link}>
+                        <a href={e.link} target="_blank">
                             <div className="link-button">
                                 Mais Detalhes
                                 <img src={'images/logo/github-repo.svg'} />
