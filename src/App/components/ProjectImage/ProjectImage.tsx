@@ -1,6 +1,6 @@
 import './ProjectImage.css';
 import { useEffect, useState } from 'react';
-import { FaCircleLeft, FaCircleRight } from "react-icons/fa6";
+import { FaCircleLeft, FaCircleRight, } from "react-icons/fa6";
 import ImageModal from '../ImageModal/ImageModal';
 //Imagens do projeto.
 function ProjectImage(props: { images: string[], projectName: string }) {
@@ -23,15 +23,18 @@ function ProjectImage(props: { images: string[], projectName: string }) {
 
     //Avança uma imagem na lista de imagem.
     function nextImage() {
-        console.log(props.images.length)
+        //Se acabar imagens desabilitada botão.
         if (image + 1 === props.images.length - 1) {
             setImage(image + 1);
             setDisableRightButton(true);
             setDisableLeftButton(false);
-            return;
-        } else {
+            return true;
+        }
+        //Continua avançando nas imagens.
+        else {
             setDisableLeftButton(false);
             setImage(image + 1);
+            return false;
         }
     }
 
@@ -58,12 +61,26 @@ function ProjectImage(props: { images: string[], projectName: string }) {
         {/*Container da imagem e dos botões */}
         <div style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <img src={props.images[image]} className='images' onClick={showImageModal} />
-            <div style={{ display: 'flex', width: '100%', padding: 5, alignItems: 'center', justifyContent: 'center', position: 'relative', bottom: 55, background: '#ffffff08', }}>
+            <div className='circle-imagem-positon-container'>
+                {
+                    //Gera circulo para cada imagem.
+                    props.images.map((_e, key) => {
+                        /*Se a chave atual foi igual a posição da imagem muda cor do círculo,
+                        se não mostra círculo normal*/
+                        if (key === image) {
+                            return <div className='circle-image-position' style={{ backgroundColor: "#2050ef" }}></div>
+                        } else {
+                            return <div className='circle-image-position' style={{ backgroundColor: "#737374" }}></div>
+                        }
+                    })
+                }
+            </div>
+            <div style={{ display: 'flex', width: '100%', padding: 5, alignItems: 'center', justifyContent: 'center', bottom: 55, }}>
                 {/*Botões de selecionar a imagem.*/}
-                <button className='button-image-select' onClick={previousImage} disabled={disableLeftButton}>Imagem Anterior<FaCircleLeft size={20} color='#fdfdfd' /></button>
-                <button className='button-image-select' onClick={nextImage} disabled={disableRightButton}>Próxima Imagem<FaCircleRight size={20} color='#fdfdfd' /></button>
+                <button className='button-image-select' onClick={previousImage} disabled={disableLeftButton}><FaCircleLeft size={20} color='#fdfdfd' /></button>
+                <button className='button-image-select' onClick={nextImage} disabled={disableRightButton}><FaCircleRight size={20} color='#fdfdfd' /></button>
             </div >
-        </div>
+        </div >
     </>
 }
 

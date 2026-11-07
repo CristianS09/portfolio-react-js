@@ -1,7 +1,7 @@
 //Import de icons.
 import { FaCode, FaGooglePlay, FaMoon, FaRegUserCircle, FaSun, FaCaretDown, FaGraduationCap } from "react-icons/fa";
 import './NavBar.css';
-import { MdOutlineWork, MdWork } from "react-icons/md";
+import { MdWork } from "react-icons/md";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 //Barra de navegação

@@ -5,6 +5,11 @@ export interface CertificationInterface {
     descricao: string
 }
 
+//Interface de imagens
+interface Images {
+    url: string
+}
+
 //Interface das Stacks.
 interface Stacks {
     nome_stack: string,
@@ -16,7 +21,7 @@ export interface ProjectInterface {
     titulo: string,
     descricao: string,
     url_projeto: string,
-    imagens: string[],
+    imagens: Images[],
     data_envio: string,
     url_hospedagem: string,
     stacks: Stacks[]
@@ -27,7 +32,7 @@ export interface PublishedAppsInterface {
     titulo: string,
     descricao: string,
     url_projeto: string,
-    imagens: string[],
+    imagens: Images[],
     data_envio: string,
     url_hospedagem: string,
     stacks: Stacks[],

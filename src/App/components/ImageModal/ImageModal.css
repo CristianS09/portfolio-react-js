@@ -1,11 +1,11 @@
 /*Animação de quando o modal é mostrado*/
 @keyframes show-modal-animation {
     from {
-        top: 0px;
+        opacity: 0;
     }
 
     to {
-        top: -15px;
+        opacity: 1;
     }
 }
 
