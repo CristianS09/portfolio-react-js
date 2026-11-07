@@ -1,0 +1,22 @@
+/*Botão de recarregar os dados*/
+.reload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    gap: 5px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    color: #5954ff;
+    border: 2px solid #5954ff;
+    background-color: transparent;
+}
+
+/*Ao passar o mouse sobre o botão*/
+.reload-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #fff;
+}

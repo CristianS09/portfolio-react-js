@@ -1,0 +1,78 @@
+/*Container das informações do perfil*/
+#profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+
+/*Background do perfil*/
+#profile-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0px 0px 30px 30px;
+    width: 100%;
+    margin: 0px;
+    height: auto;
+    /*Usa imagem svg para o fundo.*/
+    background-image: url('/code-square-svgrepo-com.svg');
+    background-repeat: round;
+    background-color: #070289;
+    background-size: 30px;
+}
+
+/*Card com informações do perfil*/
+#profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 100%;
+    background-color: #000a3cc5;
+}
+
+.profile-container p {
+    color: #fff;
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 0.4em;
+}
+
+.social-media a {
+    margin-left: 10px;
+}
+
+/*Logo do github e likedin*/
+.logo {
+    transition: 1s;
+}
+
+.logo:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+/*Imagem do perfil*/
+#profile-image {
+    margin-top: 10px;
+    height: 220px;
+    max-width: 205px;
+    min-width: 200px;
+    border-radius: 90%;
+}
+
+/*Cor do título*/
+#title {
+    color: #fff;
+}
+
+p {
+    font-size: 18px;
+}

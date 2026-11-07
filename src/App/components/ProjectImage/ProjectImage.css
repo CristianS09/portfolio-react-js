@@ -1,0 +1,41 @@
+/*Estilo dos botões de selecionar a imagem*/
+.button-image-select {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #fff;
+    height: 35px;
+    padding: 5px;
+    background: rgb(88, 80, 255);
+    border: none;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.button-image-select:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.button-image-select:disabled {
+    background-color: #585858;
+    color: #ffffff;
+    opacity: 1;
+    cursor: no-drop;
+}
+
+/*Estilização das imagens*/
+.images {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    border: 2px solid #2e2e2e;
+    border-radius: 8px;
+}
+
+.images:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

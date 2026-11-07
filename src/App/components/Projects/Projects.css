@@ -1,0 +1,126 @@
+/*Container do card*/
+.project-card-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Tema escuro do card*/
+.project-card-dark {
+    width: 70%;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #2b2a2a;
+}
+
+/*Tema claro do card*/
+.project-card-light {
+    width: 70%;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #000;
+    border: 2px solid #e3e2e2;
+}
+
+/*Cabeçalho do card*/
+.project-card-header {
+    width: 100%;
+    margin-left: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Corpo do card*/
+.project-card-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Rodapé do card*/
+.project-card-footer {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*Botão de link do projeto*/
+.link-button-repo,
+.link-button-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 5px;
+    width: 200px;
+    background-color: #e7e7e7;
+    color: #2b2a2a;
+}
+
+.link-button-project {
+    border: 2px solid #3f5efb;
+    color: #3c5bfa;
+    background-color: transparent;
+}
+
+/*Ao passar o mouse sobre o botão*/
+.link-button-repo:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.link-button-project:hover {
+    background-color: #3f5efb;
+    color: #ffff;
+}
+
+a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*Estilização do container da descrição do projeto*/
+.project-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 60%;
+    background-color: #0802824a;
+    height: auto;
+    border-radius: 0px 2px 2px 0px;
+    border-left: 4px solid #3c5bfa;
+}
+
+/*Badge da data de envio*/
+.date-badge {
+    border-top: 2px solid #3c5bfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    gap: 5px;
+    padding: 5px;
+    width: auto;
+    height: 20px;
+}

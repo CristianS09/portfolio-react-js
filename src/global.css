@@ -1,0 +1,31 @@
+/*CSS Global*/
+
+/*Importa fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+/*Fonte Commissioner para todos os elementos*/
+* {
+    font-family: "Commissioner", sans-serif;
+}
+
+/*Container dos badges de stacks*/
+.stacks-badge-container {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Badge das stacks*/
+.stacks-badge {
+    width: auto;
+    height: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}

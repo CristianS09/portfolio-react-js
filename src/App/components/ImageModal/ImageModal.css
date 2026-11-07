@@ -1,0 +1,75 @@
+/*Animação de quando o modal é mostrado*/
+@keyframes show-modal-animation {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: -15px;
+    }
+}
+
+/*Container do modal*/
+#modal-overlayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #01020b92;
+    position: fixed;
+    z-index: 9;
+}
+
+/*Modal*/
+#modal {
+    width: 75%;
+    height: auto;
+    top: -15px;
+    padding: 8px;
+    position: fixed;
+    border-radius: 25px;
+    animation: show-modal-animation 0.5s ease;
+}
+
+/*Cabeçalho do modal*/
+#modal-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+/*Corpo do modal*/
+#modal-body {
+    width: 100%;
+    padding-top: 5px;
+}
+
+/*Imagem do modal*/
+#modal-body img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+}
+
+/*Botão de fechar o modal*/
+#close-button {
+    padding: 8px;
+    width: 20%;
+    height: auto;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background-color: #721414;
+}
+
+/*Ao passar o mouse sobre o botão*/
+#close-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

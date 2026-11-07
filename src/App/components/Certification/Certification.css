@@ -1,0 +1,38 @@
+/*Container do certificado*/
+#certification-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Card do certificado*/
+.certification-card {
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+/*Imagem do certificado.*/
+.certification-card img {
+    width: 70%;
+    border-radius: 20px 0px 20px 0px;
+    border-top: 4px solid #295ee3;
+    border-bottom: 4px solid #295ee3;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.certification-card p {
+    background-color: #0833a9b3;
+    border-left: 3px solid #6d9df7;
+    color: #fff;
+    padding: 5px;
+}

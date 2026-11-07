@@ -1,0 +1,92 @@
+/*Container dos cards*/
+.published-apps-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+/*Tema escuro do card*/
+.published-apps-card-dark {
+    width: 70%;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #2b2a2a;
+}
+
+/*Tema claro do card*/
+.published-apps-card-light {
+    width: 70%;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #000;
+    border: 2px solid #e3e2e2;
+}
+
+/*Cabeçalho do card*/
+.published-apps-card-header {
+    width: 100%;
+    margin-left: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*Corpo do card*/
+.published-apps-card-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Rodapé do card*/
+.published-apps-card-footer {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*Ícone do aplicativo*/
+.icon-app {
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+/*Botão de levar para a loja*/
+.link-button-store {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 5px;
+    width: 200px;
+    background-color: #047f08;
+    color: #ffffff;
+}
+
+.link-button-store:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

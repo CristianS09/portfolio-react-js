@@ -1,0 +1,64 @@
+/*Container dos cards de experiências profissionais.*/
+.experiences-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*Cards*/
+
+/*Card de experiências no modo escuro*/
+.experiences-card-dark {
+    width: 70%;
+    height: auto;
+    border-radius: 25px;
+    padding: 5px;
+    border: 2px solid #2b2a2a;
+}
+
+
+/*Card de experiências no modo claro*/
+.experiences-card-light {
+    width: 70%;
+    height: auto;
+    border-radius: 25px;
+    padding: 5px;
+    border: 2px solid #e3e2e2;
+}
+
+/*Cabeçalho do card*/
+.experiences-card-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experiences-card-header p {
+    font-weight: 300;
+}
+
+/*Corpo do card.*/
+.experiences-card-body {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: #6363fb;
+    border-radius: 100%;
+}
+
+.line {
+    border: 2px solid #6363fb;
+    height: 50px;
+}

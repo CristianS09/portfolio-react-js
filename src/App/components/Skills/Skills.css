@@ -1,0 +1,48 @@
+/*Container das skills*/
+#skills-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/*Card das skills.*/
+.skills-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 10%;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 8px;
+    height: 150px;
+    color: #000;
+}
+
+/*Exibe informações com o nome da tecnoligia*/
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+/*Imagens das skills*/
+.skills-image {
+    margin-left: 4px;
+    width: 50%;
+    height: auto;
+}
+
+/*Ajusta tamanho do card das skills em telas menor que 900px*/
+@media (max-width: 900px) {
+    .skills-card {
+        width: 20%;
+        font-size: smaller;
+    }
+}

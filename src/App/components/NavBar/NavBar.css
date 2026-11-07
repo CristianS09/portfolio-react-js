@@ -1,0 +1,130 @@
+/*Animação da barra de navegação ao abrir*/
+@keyframes nav-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Animação do botão de abrir a barra de navegação ao aparecer.*/
+@keyframes open-nav-button-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Container da barra de navegação*/
+
+#nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Estilo da navbar no modo claro.*/
+.navLight {
+    border: 2px solid #a6a5a5;
+    background-color: #ffffffd7;
+}
+
+
+/*Estilo da navbar no modo escuro.*/
+.navDark {
+    border: 2px solid #595959;
+    background-color: #363636d4;
+}
+
+/*Barra de navegação*/
+nav {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    justify-content: space-between;
+    padding: 8px;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    border-radius: 0px 0px 10px 10px;
+    margin: 0px;
+    animation: 0.5s nav-animation ease;
+}
+
+/*Container dos botões de navegação*/
+#nav-buttons {
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/*Botão de abrir barra de navegação*/
+#open-nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    width: 100px;
+    height: 30px;
+    top: -20px;
+    background-color: #3a6bfef1;
+    padding-top: 10px;
+    left: '50%';
+    z-index: 9;
+    position: fixed;
+    border-radius: 100%;
+    animation: open-nav-button-animation 1s ease;
+}
+
+/*Container botões de navegação*/
+#nav-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+}
+
+/*Remove estilo de lista*/
+li {
+    list-style: none;
+}
+
+/*Estilo dos botões de navegação */
+#nav-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-weight: 700;
+    gap: 5px;
+}
+
+/*Botão de navegação no modo escuro*/
+.navDark a {
+    color: #9ea9ff;
+}
+
+/*Ao passar o mouse sobre*/
+.navDark a:hover {
+    color: #ffffff;
+}
+
+/*Botão de navegação no modo claro*/
+.navLight a {
+    color: #3e3e3f;
+}
+
+/*Ao passar o mouse sobre*/
+.navLight a:hover {
+    color: #3353f2;
+    cursor: pointer;
+}

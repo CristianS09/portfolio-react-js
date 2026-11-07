@@ -1,0 +1,13 @@
+/*Container do rodapé*/
+#footer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid #5145f7;
+    flex-direction: column;
+}
+
+#footer-container p {
+    font-weight: 300;
+}
