@@ -28,6 +28,7 @@ export default function NavBar() {
         }
     }
 
+    //Fecha barra de navegação
     function closeNav() {
         setShowNav(false);
     }
@@ -39,20 +40,19 @@ export default function NavBar() {
                 {/*Botões de navegação */}
                 <ul id="nav-buttons">
                     <li>
-                        <a href='#sobre'><FaRegUserCircle size={20} />Sobre</a>
+                        <a href='#sobre' onClick={closeNav}><FaRegUserCircle size={20} />Sobre</a>
                     </li>
                     <li>
-                        <a href='#projetos'><FaCode size={20} />Projetos</a>
+                        <a href='#projetos' onClick={closeNav}><FaCode size={20} />Projetos</a>
                     </li>
                     <li>
-                        <a href='#appspublicados'><FaGooglePlay size={20} />Aplicativos Publicados</a>
+                        <a href='#appspublicados' onClick={closeNav}><FaGooglePlay size={20} />Aplicativos Publicados</a>
                     </li>
                     <li>
-                        <a href='#certificados'><FaGraduationCap size={20} />Certificados</a>
+                        <a href='#experiencias' onClick={closeNav}><MdWork size={20} />Experiências</a>
                     </li>
                     <li>
-                        <a href='#experiencias'><MdWork size={20} />Experiências</a>
-
+                        <a href='#certificados' onClick={closeNav}><FaGraduationCap size={20} />Certificados</a>
                     </li>
                 </ul>
                 {theme === 'dark' ? <FaSun cursor={'pointer'} onClick={changeTheme} size={20} /> : <FaMoon onClick={changeTheme} size={20} cursor={'pointer'} />}
